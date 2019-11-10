@@ -48,7 +48,9 @@ For installing package(s):
 
 ### Running Tests
 
+ For testing purpose I am using mocha and chai modules.
  To run tests type on command line :
+ 
   ```javascript
    > npm test
    ```    
