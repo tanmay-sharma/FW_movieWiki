@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>movieWiki</title>
+    <link rel="stylesheet" type="text/css" href="/css/custom1.css" />
+  </head>
+  <body>
+    <h5><a href="/moviewiki">Home</a></h5>
+    <% if(responseObj.Response === "True"){ %>
+    <div class="container">
+      <div class="grid-container">
+        <div class="item1">
+          <span class="imgs">
+            <img src="<%= responseObj.Poster %>" alt="No image Available"
+          /></span>
+        </div>
+        <div class="item2">
+          <ul class="list">
+            <li class="list-item">
+              <strong>Title : </strong><%= responseObj.Title %>
+            </li>
+            <li class="list-item">
+              <strong>Year : </strong><%= responseObj.Year%>
+            </li>
+            <li class="list-item">
+              <strong>Release Date : </strong><%= responseObj.Released%>
+            </li>
+            <li class="list-item">
+              <strong>Type : </strong><%= responseObj.Type%>
+            </li>
+            <li class="list-item">
+              <strong>Genre : </strong><%= responseObj.Genre%>
+            </li>
+            <li class="list-item">
+              <strong>Runtime : </strong><%= responseObj.Runtime%>
+            </li>
+            <li class="list-item">
+              <strong>Director : </strong><%= responseObj.Director%>
+            </li>
+            <li class="list-item">
+              <strong>Writer : </strong><%= responseObj.Writer%>
+            </li>
+            <li class="list-item">
+              <strong>Actors : </strong><%= responseObj.Actors%>
+            </li>
+            <li class="list-item">
+              <strong>Runtime : </strong><%= responseObj.Runtime%>
+            </li>
+            <li class="list-item">
+              <strong>Plot : </strong><%= responseObj.Plot%>
+            </li>
+            <li class="list-item">
+              <strong>Language : </strong><%= responseObj.Language%>
+            </li>
+            <li class="list-item">
+              <strong>Production : </strong><%= responseObj.Production%>
+            </li>
+          </ul>
+        </div>
+        <div class="item3">
+          <ul class="list-x">
+            <li><h4>Ratings:</h4></li>
+            <% for(let i=0; i < responseObj.Ratings.length; i+=1) {%>
+            <li class="list-item">
+              <strong><%= responseObj.Ratings[i]["Source"]%> : </strong><%=
+              responseObj.Ratings[i]["Value"]%>
+            </li>
+            <%}%>
+            <li class="list-item">
+              <strong>Metascore : </strong><%= responseObj.Metascore%>
+            </li>
+            <li class="list-item">
+              <strong>imdbRating : </strong><%= responseObj.imdbRating%>
+            </li>
+            <li class="list-item">
+              <strong>imdbVotes : </strong><%= responseObj.imdbVotes%>
+            </li>
+          </ul>
+        </div>
+        <!--
+        <div class="item4">4</div>
+        -->
+      </div>
+    </div>
+    <% }else { %>
+    <div class="container-x">
+      <p class="form-header">
+        <span class="head-m"><%= responseObj.Error %></span>
+      </p>
+      <p class="form-header"><span class="">Please Try Again</span></p>
+    </div>
+    <% } %>
+    <script type="text/javascript" src="/js/custom.js"></script>
+  </body>
+</html>
