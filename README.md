@@ -7,8 +7,8 @@ It is a movie query platform where you can query the movie name and get detailed
 ****
 ### Prerequisites  
   * Operating System -> MacOS, Ubuntu (version 14.0 and above)
-  * you need to have nodejs and npm installed on your system . ([get_node](https://nodejs.org/en/download/))
-  * This API make use of **node-fetch** npm module.
+  * you need to have NodeJs and npm installed on your system . ([get_node](https://nodejs.org/en/download/))
+  * This API make use of **node-fetch, fetch** npm module.
   * Package.json include
     + body-parser: "^1.19.0",
     + cookie-parser: "^1.4.4",
