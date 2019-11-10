@@ -5,7 +5,8 @@ It is a movie query platform where you can query the movie name and get detailed
  ## Getting Started
 > Following instructions will get you a copy of the project up and running on your local machine
 ****
-### Prerequisites
+### Prerequisites  
+  * Operating System -> MacOS, Ubuntu (version 14.0 and above)
   * you need to have nodejs and npm installed on your system . ([get_node](https://nodejs.org/en/download/))
   * This API make use of **node-fetch** npm module.
   * Package.json include
