@@ -35,7 +35,7 @@ For installing package(s):
   * Download the zip file and extract it.
   * Cd to the project folder 'FW_movieWiki-master'.
   
-### Running server
+### Running Server
 
  To run server type on command line :
   ```javascript
@@ -45,7 +45,9 @@ For installing package(s):
  > localhost:3000/moviewiki  
  
  in you browser.
- 
+
+### Running Tests
+
  To run tests type on command line :
   ```javascript
    > npm test
